@@ -1,7 +1,7 @@
 var tape = require('tape');
 var Document = require('pelias-model').Document;
 var eventStream = require('event-stream');
-var regionCodeLookup = require('../src/regionCodeLookup');
+var regionCodeLookup = require('../index');
 
 function test_stream(input, testedStream, callback) {
     var input_stream = eventStream.readArray(input);
