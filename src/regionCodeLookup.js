@@ -67,7 +67,7 @@ regions.getAbbreviation = function(country, name) {
 };
 
 module.exports = {
-  createStream: function createStream() {
+  createStream: function() {
     return through2.obj(function(doc, enc, next) {
       var country = doc.getAlpha3( 'admin0' );
       var region = doc.getAdmin( 'admin1' );
