@@ -1,0 +1,37 @@
+{
+  "name": "pelias-wof-regioncode-lookup",
+  "version": "1.0.0",
+  "description": "This project exposes a stream that will modify pelias Document objects to include a region code. It is a temporary project that will last until Who's on First supports 2 character region codes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/regionCodeLookupTest.js | tap-dot",
+    "lint": "jshint .",
+    "validate": "npm ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pelias/wof-regioncode-lookup.git"
+  },
+  "author": "mapzen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pelias/wof-regioncode-lookup/issues"
+  },
+  "homepage": "https://github.com/pelias/wof-regioncode-lookup#readme",
+  "dependencies": {
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "event-stream": "^3.3.2",
+    "pelias-model": "^0.4.0",
+    "jshint": "^2.5.6",
+    "precommit-hook": "^1.0.7",
+    "tap-dot": "^1.0.0",
+    "tape": "^4.2.2"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
+}
