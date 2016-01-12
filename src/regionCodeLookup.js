@@ -73,7 +73,7 @@ module.exports = {
       var region = doc.getAdmin( 'admin1' );
 
       if (regions.isSupportedRegion(country, region)) {
-        doc.setAdmin( "admin1_abbr", regions.getAbbreviation(country, region))
+        doc.setAdmin( 'admin1_abbr', regions.getAbbreviation(country, region));
       }
 
       this.push(doc);
