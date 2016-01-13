@@ -1,6 +1,6 @@
 {
   "name": "pelias-wof-regioncode-lookup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This project exposes a stream that will modify pelias Document objects to include a region code. It is a temporary project that will last until Who's on First supports 2 character region codes.",
   "main": "index.js",
   "scripts": {
