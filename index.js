@@ -56,7 +56,7 @@ var regions = {
     'Wisconsin': 'WI',
     'Wyoming': 'WY'
   }
-}
+};
 
 regions.isSupportedRegion = function(country, name) {
   return this.hasOwnProperty(country) && this[country].hasOwnProperty(name);

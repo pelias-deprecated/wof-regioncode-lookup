@@ -12,11 +12,11 @@ function test_stream(input, testedStream, callback) {
 
 tape('createPeliasDocGenerator', function(test) {
   test.test('unsupported country but supported region should not set admin1_abbr', function(t) {
-    var inputDoc = new Document( 'whosonfirst', '1')
+    var inputDoc = new Document( 'whosonfirst', 'placetype', '1')
                     .setAlpha3( 'XYZ' )
                     .setAdmin( 'admin1', 'Pennsylvania');
 
-    var expectedDoc = new Document( 'whosonfirst', '1')
+    var expectedDoc = new Document( 'whosonfirst', 'placetype', '1')
                     .setAlpha3( 'XYZ' )
                     .setAdmin( 'admin1', 'Pennsylvania');
 
@@ -30,11 +30,11 @@ tape('createPeliasDocGenerator', function(test) {
   });
 
   test.test('supported country but unsupported region should not set admin1_abbr', function(t) {
-    var inputDoc = new Document( 'whosonfirst', '1')
+    var inputDoc = new Document( 'whosonfirst', 'placetype', '1')
                     .setAlpha3('USA')
                     .setAdmin( 'admin1', 'unsupported region' );
 
-    var expectedDoc = new Document( 'whosonfirst', '1')
+    var expectedDoc = new Document( 'whosonfirst', 'placetype', '1')
                     .setAlpha3('USA')
                     .setAdmin( 'admin1', 'unsupported region' );
 
@@ -48,12 +48,12 @@ tape('createPeliasDocGenerator', function(test) {
   });
 
   test.test('supported country and supported region should override admin1_abbr', function(t) {
-    var inputDoc = new Document( 'whosonfirst', '1')
+    var inputDoc = new Document( 'whosonfirst', 'placetype', '1')
                     .setAlpha3('USA')
                     .setAdmin( 'admin1', 'Pennsylvania' )
                     .setAdmin( 'admin1_abbr', 'NY' );
 
-    var expectedDoc = new Document( 'whosonfirst', '1')
+    var expectedDoc = new Document( 'whosonfirst', 'placetype', '1')
                     .setAlpha3('USA')
                     .setAdmin( 'admin1', 'Pennsylvania' )
                     .setAdmin( 'admin1_abbr', 'PA' );
